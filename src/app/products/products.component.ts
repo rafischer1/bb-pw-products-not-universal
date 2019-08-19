@@ -85,7 +85,7 @@ export class ProductsComponent implements OnInit {
     }
   }
 
-  // -= Create New Product Form Functionalit =-
+  // -= Create New Product Form Functionality =-
   createForm() {
     this.myform = new FormGroup({
       name: this.name,
