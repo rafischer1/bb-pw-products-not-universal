@@ -1,0 +1,30 @@
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 1%;
+  font-family: Roboto;
+}
+
+form {
+  border: 1px solid rgb(132, 168, 166);
+  padding: 3%;
+  border-radius: 2px;
+  margin: 1%;
+  font-size: 1.2em;
+}
+
+button {
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2%;
+  cursor: pointer;
+  outline: none;
+}
+
+button:active {
+  color: rgb(51, 83, 143);
+  background-color: azure;
+  border: 1px solid blue;
+}

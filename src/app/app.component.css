@@ -1,0 +1,25 @@
+nav {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  padding: 1%;
+  width: 100%;
+}
+
+button {
+  outline: none;
+  font-family: 'Roboto';
+  font-size: 1.4em;
+  margin: 2% auto;
+  border: 1px solid rgb(39, 39, 39);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 1px solid rgb(0, 255, 149);
+}
+
+button:active {
+  border: 1px solid rgb(0, 38, 255);
+}

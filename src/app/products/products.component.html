@@ -1,0 +1,81 @@
+<div class="productContainer">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Code</th>
+        <th scope="col">Created By</th>
+        <th scope="col">Last Modified</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="tr_body" *ngFor="let i of productList | priceSort">
+        <td class="td_name">
+          <img
+            src="{{ getPhoto() }}"
+            alt="Glasses avatar photo"
+            class="avatar"
+          />
+          <span>Parby Warker {{ i.name }}</span>
+        </td>
+        <td *ngIf="!this.clicked">
+          <a (click)="togglePrice()">{{ i.price | currency: 'USD' }}</a>
+        </td>
+        <td *ngIf="this.clicked">
+          <input
+            #box
+            type="number"
+            value="{{ i.price }}"
+            (keyup.enter)="changePrice(i.id, box.value)"
+          />
+        </td>
+        <td>{{ i.code }}</td>
+        <td>{{ i.creator }}</td>
+        <td>{{ formatDate(i.last_modified) }}</td>
+        <td class="borderRight">
+          <button (click)="delete(i, i.id)" shadowColor="warn" class="tooltip">
+            <span id="trash">🗑</span>
+            <span class="tooltiptext">Delete</span>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="form-page">
+  <form class="create-form" #f="ngForm" novalidate (ngSubmit)="submit(f.value)">
+    <div class="title"><u>Create a new product</u></div>
+    <div class="form-group">
+      <label for="name">Product Name: </label>
+      <input type="text" [formControl]="name" />
+    </div>
+    <div class="form-group">
+      <label for="country">Price: </label>
+      <input type="number" [formControl]="createPrice" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Created By: </label>
+      <select name="creators" [formControl]="creator">
+        <option value="Jon Snow">Jon Snow</option>
+        <option value="Samwell Tarly">Samwell Tarly</option>
+        <option value="Jaqen H'ghar">Jaqen H'ghar</option>
+        <option value="Arya Stark">Arya Stark</option>
+        <option value="Sansa Stark">Sansa Stark</option>
+        <option value="Jamie Lannister">Jamie Lannister</option>
+        <option value="Sandor Clegane">Sandor Clegane</option>
+        <option value="Khal Drogo">Khal Drogo</option>
+      </select>
+    </div>
+    <br />
+    <button class="submit-button" type="submit">
+      Submit
+    </button>
+    <div class="pre">
+      <!-- <pre>{{ myform.value | json }}</pre> -->
+    </div>
+  </form>
+</div>

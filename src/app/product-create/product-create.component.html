@@ -1,0 +1,29 @@
+<div class="form-page">
+  <form #f="ngForm" novalidate (ngSubmit)="submit(f.value)">
+    <div class="form-group">
+      <label for="name">Product Name: </label>
+      <input type="text" [formControl]="name" />
+    </div>
+    <div class="form-group">
+      <label for="country">Price: </label>
+      <input type="number" [formControl]="price" />
+    </div>
+
+    <div class="form-group">
+      <label for="description">Created By: </label>
+      <select name="creators" [formControl]="creator">
+        <option value="Jon Snow">Jon Snow</option>
+        <option value="Samwell Tarly">Samwell Tarly</option>
+        <option value="Jaqen H'ghar">Jaqen H'ghar</option>
+        <option value="Arya Stark">Arya Stark</option>
+        <option value="Sansa Stark">Sansa Stark</option>
+        <option value="Jamie Lannister">Jamie Lannister</option>
+        <option value="Sandor Clegane">Sandor Clegane</option>
+        <option value="Khal Drogo">Khal Drogo</option>
+      </select>
+    </div>
+    <br />
+    <button ly-button type="submit" outlined color="primary">Submit</button>
+    <pre>{{ myform.value | json }}</pre>
+  </form>
+</div>

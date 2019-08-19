@@ -1,0 +1,156 @@
+.productContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 15%;
+}
+
+table {
+  width: 95%;
+  font-family: Roboto;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+img {
+  width: 35px;
+  border-radius: 50%;
+  padding: 3%;
+}
+
+thead {
+  border: none;
+}
+
+thead > tr > th {
+  color: rgb(132, 168, 166);
+}
+
+.tr_body {
+  border: 1px solid rgb(132, 168, 166);
+}
+
+.tr_body:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.td_name {
+  text-align: left;
+  display: flex;
+  align-content: center;
+  border-right: 1px solid rgb(132, 168, 166);
+}
+
+.td_name > span {
+  margin-top: 3%;
+}
+
+button {
+  color: black;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+a {
+  cursor: pointer;
+}
+
+a:hover {
+  color: rgb(132, 168, 166);
+}
+
+#trash {
+  font-size: 1.8em;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 60px;
+  background-color: rgb(170, 109, 109);
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.form-page {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  padding: 1%;
+  font-family: Roboto;
+}
+
+.create-form {
+  border: 1px solid rgb(132, 168, 166);
+  padding: 3%;
+  border-radius: 2px;
+  margin: 1%;
+  font-size: 1.2em;
+}
+
+.submit-button {
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 2%;
+  cursor: pointer;
+  outline: none;
+}
+
+.submit-button:active {
+  color: rgb(51, 83, 143);
+  background-color: azure;
+  border: 1px solid blue;
+}
+
+input {
+  text-align: center;
+  width: 100%;
+  outline-color: aqua;
+  height: 1.75em;
+  font-size: 1em;
+  font-family: monospace;
+}
+
+.pre {
+  margin-right: 25%;
+  text-align: left;
+}
+
+select {
+  margin-top: 2%;
+  outline-color: aqua;
+  font-size: 0.85em;
+  font-family: monospace;
+}
+
+.title {
+  margin-bottom: 2%;
+}
