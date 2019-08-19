@@ -85,8 +85,7 @@ export class ProductsComponent implements OnInit {
     }
   }
 
-  // form stuff
-
+  // -= Create New Product Form Functionalit =-
   createForm() {
     this.myform = new FormGroup({
       name: this.name,
@@ -105,7 +104,6 @@ export class ProductsComponent implements OnInit {
       last_modified: Math.round(new Date().getTime() / 1000)
     };
 
-    console.log('Form:', postBody);
     this.postProduct(postBody);
   }
 
