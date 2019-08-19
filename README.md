@@ -1,6 +1,6 @@
 # Backbone Take Home Angular Env with Heroku Deployed Server 🕶
 
-Run dev environment on 'localhost:4200': `ng serve --open`
+Run dev environment on 'localhost:4200': `git clone && cd bb-pw-products-not-universal && ng serve --open`
 
 [Deployed Angular URL 🛡](resonant-wilderness.surge.sh)
 

@@ -71,7 +71,6 @@ export class ProductsComponent implements OnInit {
     this.productList.find(el => el.id === id).last_modified = Math.round(
       new Date().getTime() / 1000
     );
-    console.log(this.productList.find(el => el.id === id));
     this.productService.putPrice(this.productList.find(el => el.id === id));
     return this.togglePrice();
   }
