@@ -1,10 +1,10 @@
-# Test run for Backbone Take Home
+# Backbone Take Home Angular Env with Heroku Deployed Server 🕶
 
-Run dev environment on 'localhost:4200': `ng serve`
+Run dev environment on 'localhost:4200': `ng serve --open`
 
-`ng new wp-models && cd wp-models`
+[Deployed Angular URL 🛡](resonant-wilderness.surge.sh)
 
-`ng generate component models`
+[Deployed Heroku Express Server 🐘](https://backbone-test-api.herokuapp.com/)
 
 Material Design: npm install --save @angular/material @angular/cdk @angular/animations
 
